@@ -1,3 +1,12 @@
 {
-    "common":{}
+    "common":{
+        "header": {
+            "sidePanelMenu": {
+              "openPanelBtnAriaText": "Кнопка відкриття бічної панелі",
+              "closePanelBtnAriaText": "Кнопка закриття бічної панелі"
+            },
+            "logoLeftText": "левый",
+            "logoRightText": "берег"
+          }
+    }
 }
