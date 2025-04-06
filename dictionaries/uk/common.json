@@ -77,6 +77,94 @@
           "text": "Youtube"
         }
       ]
+    },
+    "catalog": {
+      "home_title": "Новини",
+      "product_title": "Переглянути новини",
+      "subtitle": "Оберіть регіон, який Вас цікавить",
+      "categories": [
+        {
+          "id": "1",
+          "attributes": {
+            "title": "Херсон",
+            "sequence_number": 1,
+            "image": {
+              "image_description": "Херсон",
+              "photo": {
+                "data": {
+                  "attributes": {
+                    "url": "/images/catalog_news/kherson.jpeg"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "2",
+          "attributes": {
+            "title": "Запоріжжя",
+            "sequence_number": 2,
+            "image": {
+              "image_description": "Запоріжжя",
+              "photo": {
+                "data": {
+                  "attributes": { "url": "/images/catalog_news/kherson.jpeg" }
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "3",
+          "attributes": {
+            "title": "Крим",
+            "sequence_number": 3,
+            "image": {
+              "image_description": "Крим",
+              "photo": {
+                "data": {
+                  "attributes": { "url": "/images/catalog_news/kherson.jpeg" }
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "4",
+          "attributes": {
+            "title": "Донецьк",
+            "sequence_number": 4,
+            "image": {
+              "image_description": "Донецьк",
+              "photo": {
+                "data": {
+                  "attributes": { "url": "/images/catalog_news/donetsk.jpeg" }
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "5",
+          "attributes": {
+            "title": "Луганськ",
+            "sequence_number": 5,
+            "image": {
+              "image_description": "Луганськ",
+              "photo": {
+                "data": {
+                  "attributes": { "url": "/images/catalog_news/luhansk.jpeg" }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "serviceError": {
+        "subtitle": "Сервіс тимчасово недоступний",
+        "tip": "Спробуйте, будь ласка, пізніше"
+      }
     }
   }
 }

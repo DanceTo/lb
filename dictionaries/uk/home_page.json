@@ -1,0 +1,62 @@
+{
+  "homepage": {
+    "hero": {
+      "hiddenTitle": "Зображення із новинними картинками",
+      "banners": [
+        {
+          "image_description": "Танк і людина із гранатометом",
+          "photo": {
+            "data": {
+              "attributes": {
+                "url": "/images/homepage/hero/1.webp"
+              }
+            }
+          }
+        },
+        {
+          "image_description": "Прапор України у вигляді серця",
+          "photo": {
+            "data": {
+              "attributes": {
+                "url": "/images/homepage/hero/2.webp"
+              }
+            }
+          }
+        },
+        {
+          "image_description": "Напис новини",
+          "photo": {
+            "data": {
+              "attributes": {
+                "url": "/images/homepage/hero/3.webp"
+              }
+            }
+          }
+        },
+        {
+          "image_description": "Солдат на фоні прапора України",
+          "photo": {
+            "data": {
+              "attributes": {
+                "url": "/images/homepage/hero/4.webp"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "about": {
+      "title": "Про нас",
+      "image": {
+        "src": "/images/homepage/about/about@2x.webp",
+        "alt": "Про нас фото"
+      },
+      "content": [
+        "Accusantium optio ipsum tenetur ea reprehenderit earum vitae quam temporibus illum, deleniti molestiae quo officia mollitia inventore! Quaerat, enim itaque modi debitis odit repellendus odio saepe, minima dolore, ratione harum.",
+        "Quaerat obcaecati minus, dolore cumque saepe aliquid consectetur quis accusantium culpa, beatae fugiat ipsam excepturi nisi, reiciendis fugit. Deleniti delectus iure perspiciatis soluta libero cupiditate hic quod eius labore veniam.",
+        "Voluptatibus, eos eius nisi commodi quis corporis quasi error maiores adipisci similique dolores, animi aut totam, incidunt consequatur sit veniam necessitatibus quae repellat! Deserunt totam maiores dolorem explicabo ipsa asperiores."
+      ],
+      "button": "До новин"
+    }
+  }
+}
