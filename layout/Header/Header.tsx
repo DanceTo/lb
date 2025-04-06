@@ -1,55 +1,89 @@
 'use client';
-import { Logo } from "@/components/ui/Logo";
 
-export interface HeaderProps {
-    data: {
-      sidePanelMenu: {
-        openPanelBtnAriaText: string;
-        closePanelBtnAriaText: string;
-      };
-    //   mobileMenu: {
-    //     openMenuBtnAriaText: string;
-    //     closeMenuBtnAriaText: string;
-    //   };
-    //   nav: NavLink[];
-    //   toHomePage: NavLink;
-    //   logoAriaLabelText: string;
-      logoLeftText: string;
-      logoRightText: string;
-    //   forTraitorBtnText: string;
-    //   languageButtonText: string;
-    //   basketAriaLabel: string;
-    //   basketTitle: string;
-    };
-    // dataOrder: IOrderModalStatic;
-    // form: FormStaticDataT;
-  }
-  
+import { useParams, usePathname } from 'next/navigation';
 
-export const Header:React.FC<HeaderProps> = ({data}) => {
+import { checkPageName } from '@/utils';
+import { HOME, TRAITORS } from '@/data/routes';
+import { Locale } from '@/i18n.config';
+import { Logo } from '@/components/ui/Logo';
+import { PageLink } from '@/components/ui/PageLink';
+import { MobileMenu } from '@/components/MobileMenu';
+import { TranslationSwitcher } from '@/components/TranslationSwitcher';
 
-    const {
-        // sidePanelMenu,
-        // nav,
-        // mobileMenu,
-        // toHomePage,
-        // languageButtonText,
-        // logoAriaLabelText,
-        logoLeftText,
-        logoRightText,
-        // forTraitorBtnText,
-      } = data;
+import { HeaderProps } from './types';
 
+export const Header: React.FC<HeaderProps> = ({ data }) => {
+  const {
+    // sidePanelMenu,
+    nav,
+    mobileMenu,
+    toHomePage,
+    languageButtonText,
+    // logoAriaLabelText,
+    logoLeftText,
+    logoRightText,
+    forTraitorBtnText,
+  } = data;
+
+  const pathname = usePathname();
+  const lang = useParams().lang as Locale;
+  const isTraitorPage = checkPageName(pathname, TRAITORS);
 
   return (
     <header className="z-10 w-full bg-body pb-8 pt-9 xl:pb-10 smOnly:fixed smOnly:top-0">
-        <Logo         
+      <Logo
         logoLeftText={logoLeftText}
         logoRightText={logoRightText}
         position="header"
-        className="xl:mb-[-60px]"/>
-    </header>
-  )
-}
+        className="xl:mb-[-60px]"
+      />
 
-export default Header
+      <div className="smOnly:header-underline container relative">
+        <nav className="grid grid-cols-3 items-center justify-items-stretch">
+          {/* {isHomePage ? (
+            <SideMenu
+              btnAriaClose={sidePanelMenu.closePanelBtnAriaText}
+              btnAriaOpen={sidePanelMenu.openPanelBtnAriaText}
+              links={nav}
+            />
+          ) : (
+            <Link
+              className="link hidden max-w-fit items-center md:flex"
+              href={`${toHomePage.href}${lang}`}
+            >
+              {toHomePage.name}
+            </Link>
+          )} */}
+
+          <MobileMenu
+            businessText={forTraitorBtnText}
+            links={nav}
+            languageButtonText={languageButtonText}
+            btnAriaClose={mobileMenu.closeMenuBtnAriaText}
+            btnAriaOpen={mobileMenu.openMenuBtnAriaText}
+            toHomePage={toHomePage}
+          />
+
+          <div className="justify-self-center"></div>
+          <div className="flex items-center justify-self-end">
+            {!isTraitorPage && (
+              <PageLink
+                isIcon={true}
+                text={forTraitorBtnText}
+                className="pageLink h-6 items-center sm:flex md:mr-6 xl:mr-[88px] smOnly:hidden"
+              />
+            )}
+
+            <TranslationSwitcher
+              lang={lang}
+              buttonText={languageButtonText}
+              className="md:mr-7 xl:mr-9 smOnly:hidden"
+            />
+          </div>
+        </nav>
+      </div>
+    </header>
+  );
+};
+
+export default Header;

@@ -1,12 +1,28 @@
 {
-    "common":{
-        "header": {
-            "sidePanelMenu": {
-              "openPanelBtnAriaText": "Кнопка відкриття бічної панелі",
-              "closePanelBtnAriaText": "Кнопка закриття бічної панелі"
-            },
-            "logoLeftText": "левый",
-            "logoRightText": "берег"
-          }
+  "common": {
+    "header": {
+      "sidePanelMenu": {
+        "openPanelBtnAriaText": "Кнопка открытия боковой панели",
+        "closePanelBtnAriaText": "Кнопка закрытия боковой панели"
+      },
+      "mobileMenu": {
+        "openMenuBtnAriaText": "Кнопка открытия мобильного меню",
+        "closeMenuBtnAriaText": "Кнопка закрытия мобильного меню"
+      },
+      "nav": [
+        {
+          "name": "Новости",
+          "href": "news"
+        },
+        {
+          "name": "Про Нас",
+          "href": "about"
+        }
+      ],
+      "logoLeftText": "левый",
+      "logoRightText": "берег",
+      "forTraitorBtnText": "Коллаборанты",
+      "languageButtonText": "RU"
     }
+  }
 }
