@@ -5,22 +5,16 @@ import { usePathname } from 'next/navigation';
 import { Logo } from '@/components/ui/Logo';
 import { ContactList } from '@/components/ContactList';
 import { FooterNavRow } from '@/components/FooterNavRow';
-// import { Information } from '@/components/Information';
-// import { ContactList } from '@/components/ContactList';
-// import { SocialsMenu } from '@/components/SocialsMenu';
-// import { SoftRyzen } from '@/components/SoftRyzen';
+import { Information } from '@/components/Information';
+import { SocialsMenu } from '@/components/SocialsMenu';
 
 import { FooterProps } from './types';
-
 import { checkPageName } from '@/utils';
 import { HOME } from '@/data/routes';
 
 export const Footer: React.FC<FooterProps> = ({
-  //   information,
-  //   dynamicInfo,
+  information,
   footer: { contacts, social_text, social, ...restProps },
-  //   dataOrder,
-  //   form,
 }) => {
   const path = usePathname();
   const isHomePage = checkPageName(path, HOME);
@@ -42,9 +36,9 @@ export const Footer: React.FC<FooterProps> = ({
             />
           </div>
           {isHomePage && <FooterNavRow data={restProps} />}
-          {/* <Information information={information} dynamicInfo={dynamicInfo} /> */}
+          <Information information={information} />
           <div>
-            {/* <SocialsMenu socials={social} title={social_text} /> */}
+            <SocialsMenu socials={social} title={social_text} />
           </div>
         </div>
       </div>

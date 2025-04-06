@@ -172,14 +172,18 @@ a:focus-visible .link::before,
 .phone,
 .email,
 .instagram,
-.telegram {
+.telegram,
+.tiktok,
+.youtube {
   @apply pl-8;
 }
 
 .phone::before,
 .email::before,
 .instagram::before,
-.telegram::before {
+.telegram::before,
+.tiktok::before,
+.youtube::before {
   @apply h-6 w-6;
 }
 
@@ -203,6 +207,14 @@ a:focus-visible .link::before,
 
 .telegram::before {
   @apply bg-[url('/icons/icon_telegram.svg')];
+}
+
+.tiktok::before {
+  @apply bg-[url('/icons/icon_tiktok.svg')];
+}
+
+.youtube::before {
+  @apply bg-[url('/icons/icon_youtube.svg')];
 }
 
 .viber::before {

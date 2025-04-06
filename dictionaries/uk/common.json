@@ -65,6 +65,16 @@
           "href": "https://t.me/+38095 555 5555",
           "icon": "telegram",
           "text": "Telegram"
+        },
+        {
+          "href": "https://",
+          "icon": "tiktok",
+          "text": "Tiktok"
+        },
+        {
+          "href": "https://",
+          "icon": "youtube",
+          "text": "Youtube"
         }
       ]
     }

@@ -35,7 +35,7 @@ export async function generateStaticParams() {
 export default async function Layout({ children, params }: LayoutProps) {
   const { lang } = await params;
 
-  const { common } = await getDictionary(lang);
+  const { common, information } = await getDictionary(lang);
   const { header, footer } = common;
 
   return (
@@ -45,13 +45,7 @@ export default async function Layout({ children, params }: LayoutProps) {
       >
         <Header data={header} />
         <main>{children}</main>
-        <Footer
-          footer={footer}
-          // dataOrder={orderModal}
-          // information={information}
-          // dynamicInfo={dynamicInfo}
-          // form={form}
-        />
+        <Footer footer={footer} information={information} />
         <div id="modal" />
       </body>
     </html>

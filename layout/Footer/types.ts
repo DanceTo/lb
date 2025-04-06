@@ -1,6 +1,4 @@
-// import { FormStaticDataT } from '@/types';
-// import { InfoData } from '@/types/Info';
-// import { IOrderModalStatic } from '@/types/OrderModalStatic';
+import { InfoData } from '@/types/Info';
 
 export type FooterProps = {
   footer: {
@@ -22,16 +20,13 @@ export type FooterProps = {
       text: string;
     }[];
   };
-  //   information: {
-  //     title: string;
-  //     buttons: {
-  //       id: string;
-  //       text: string;
-  //       data: string;
-  //     }[];
-  //     className?: string;
-  //   };
-  //   dynamicInfo: InfoData;
-  //   dataOrder: IOrderModalStatic;
-  //   form: FormStaticDataT;
+  information: {
+    title: string;
+    buttons: {
+      id: string;
+      text: string;
+      data: string;
+    }[];
+    className?: string;
+  };
 };
