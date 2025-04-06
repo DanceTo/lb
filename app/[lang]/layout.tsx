@@ -1,29 +1,24 @@
+import { ReactNode } from 'react';
+import { Montserrat, Raleway } from 'next/font/google';
 
-import { ReactNode } from "react";
-import { Montserrat, Raleway } from "next/font/google";
+import { getDictionary } from '@/lib/dictionary';
+import type { Locale } from '@/i18n.config';
 
-
-
-import { getDictionary} from '@/lib/dictionary';
-import type { Locale } from "@/i18n.config";
-
-
-import { Header } from "@/layout/Header";
+import { Header } from '@/layout/Header';
+import { Footer } from '@/layout/Footer';
 
 import '../globals.css';
 
-
-
 const montserrat = Montserrat({
-  subsets: ["cyrillic", "latin"],
-  display: "swap",
-  variable: "--font-montserrat",
+  subsets: ['cyrillic', 'latin'],
+  display: 'swap',
+  variable: '--font-montserrat',
 });
 
 const raleway = Raleway({
-  subsets: ["cyrillic", "latin"],
-  display: "swap",
-  variable: "--font-raleway",
+  subsets: ['cyrillic', 'latin'],
+  display: 'swap',
+  variable: '--font-raleway',
 });
 
 export type LayoutProps = {
@@ -34,23 +29,29 @@ export type LayoutProps = {
 };
 
 export async function generateStaticParams() {
-  return [{ lang: "uk" }, { lang: "ru" }];
+  return [{ lang: 'uk' }, { lang: 'ru' }];
 }
 
 export default async function Layout({ children, params }: LayoutProps) {
   const { lang } = await params;
 
-  const {
-    common   } = await getDictionary(lang);
-  const { header } = common;
+  const { common } = await getDictionary(lang);
+  const { header, footer } = common;
 
   return (
     <html lang={lang}>
       <body
-       className={`${montserrat.variable} ${raleway.variable} grid min-h-screen grid-cols-1 grid-rows-[1fr_auto] md:grid-rows-[auto_1fr_auto] smOnly:pt-[119px]`}
+        className={`${montserrat.variable} ${raleway.variable} grid min-h-screen grid-cols-1 grid-rows-[1fr_auto] md:grid-rows-[auto_1fr_auto] smOnly:pt-[119px]`}
       >
-        <Header data={header}/>
+        <Header data={header} />
         <main>{children}</main>
+        <Footer
+          footer={footer}
+          // dataOrder={orderModal}
+          // information={information}
+          // dynamicInfo={dynamicInfo}
+          // form={form}
+        />
         <div id="modal" />
       </body>
     </html>

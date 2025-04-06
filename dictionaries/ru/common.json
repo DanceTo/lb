@@ -27,6 +27,46 @@
       "logoRightText": "берег",
       "forTraitorBtnText": "Предатели",
       "languageButtonText": "UA"
+    },
+    "footer": {
+      "logoAriaLabelText": "Ссылка с логотипом",
+      "contacts": [
+        {
+          "href": "tel:38095555555",
+          "icon": "phone",
+          "text": "38 (095) 555 55 55"
+        },
+        {
+          "href": "mailto:lbnews@gmail.com",
+          "icon": "email",
+          "text": "lbnews@gmail.com"
+        }
+      ],
+      "nav_text": "Навигация",
+      "nav": [
+        {
+          "name": "Новости",
+          "href": "news"
+        },
+        {
+          "name": "Про нас",
+          "href": "about"
+        }
+      ],
+      "forTraitorBtnText": "Предатели",
+      "social_text": "Социальные сети",
+      "social": [
+        {
+          "href": "https://",
+          "icon": "instagram",
+          "text": "Instagram"
+        },
+        {
+          "href": "https://t.me/+38095 555 5555",
+          "icon": "telegram",
+          "text": "Telegram"
+        }
+      ]
     }
   }
 }

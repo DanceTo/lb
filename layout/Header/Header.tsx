@@ -13,6 +13,7 @@ import { SideMenu } from '@/components/SideMenu';
 import { TranslationSwitcher } from '@/components/TranslationSwitcher';
 
 import { HeaderProps } from './types';
+import classNames from 'classnames';
 
 export const Header: React.FC<HeaderProps> = ({ data }) => {
   const {
@@ -30,6 +31,10 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
   const lang = useParams().lang as Locale;
   const isHomePage = checkPageName(pathname, HOME);
   const isTraitorPage = checkPageName(pathname, TRAITORS);
+  const logoStyles = classNames({
+    'xl:mb-[-60px]': isHomePage,
+    'xl:mb-[-45px]': isTraitorPage,
+  });
 
   return (
     <header className="z-10 w-full bg-body pb-8 pt-9 xl:pb-10 smOnly:fixed smOnly:top-0">
@@ -37,7 +42,8 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
         logoLeftText={logoLeftText}
         logoRightText={logoRightText}
         position="header"
-        className="xl:mb-[-60px]"
+        // className="xl:mb-[-60px]"
+        className={logoStyles}
       />
 
       <div className="smOnly:header-underline container relative">
