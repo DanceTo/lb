@@ -21,7 +21,6 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
     mobileMenu,
     toHomePage,
     languageButtonText,
-    // logoAriaLabelText,
     logoLeftText,
     logoRightText,
     forTraitorBtnText,

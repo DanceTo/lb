@@ -15,7 +15,7 @@
           "href": "news"
         },
         {
-          "name": "Про Нас",
+          "name": "О Нас",
           "href": "about"
         }
       ],
@@ -25,8 +25,8 @@
       },
       "logoLeftText": "левый",
       "logoRightText": "берег",
-      "forTraitorBtnText": "Коллаборанты",
-      "languageButtonText": "RU"
+      "forTraitorBtnText": "Предатели",
+      "languageButtonText": "UA"
     }
   }
 }

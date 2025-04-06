@@ -14,7 +14,7 @@ export const TranslationSwitcher: React.FC<TranslationButtonProps> = ({
 }) => {
   const pathName = usePathname();
 
-  const btnClasses = classNames('link max-w-fit', className);
+  const btnClasses = classNames('link max-w-fit font-bold', className);
 
   return (
     <Link className={btnClasses} href={redirectedPathName(lang, pathName)}>

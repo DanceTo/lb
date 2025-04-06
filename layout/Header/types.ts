@@ -12,14 +12,9 @@ export interface HeaderProps {
     };
     nav: NavLink[];
     toHomePage: NavLink;
-    //   logoAriaLabelText: string;
     logoLeftText: string;
     logoRightText: string;
     forTraitorBtnText: string;
     languageButtonText: string;
-    //   basketAriaLabel: string;
-    //   basketTitle: string;
   };
-  // dataOrder: IOrderModalStatic;
-  // form: FormStaticDataT;
 }
