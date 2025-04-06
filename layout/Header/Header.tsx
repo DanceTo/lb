@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useParams, usePathname } from 'next/navigation';
 
 import { checkPageName } from '@/utils';
@@ -8,13 +9,14 @@ import { Locale } from '@/i18n.config';
 import { Logo } from '@/components/ui/Logo';
 import { PageLink } from '@/components/ui/PageLink';
 import { MobileMenu } from '@/components/MobileMenu';
+import { SideMenu } from '@/components/SideMenu';
 import { TranslationSwitcher } from '@/components/TranslationSwitcher';
 
 import { HeaderProps } from './types';
 
 export const Header: React.FC<HeaderProps> = ({ data }) => {
   const {
-    // sidePanelMenu,
+    sidePanelMenu,
     nav,
     mobileMenu,
     toHomePage,
@@ -27,6 +29,7 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
 
   const pathname = usePathname();
   const lang = useParams().lang as Locale;
+  const isHomePage = checkPageName(pathname, HOME);
   const isTraitorPage = checkPageName(pathname, TRAITORS);
 
   return (
@@ -40,7 +43,7 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
 
       <div className="smOnly:header-underline container relative">
         <nav className="grid grid-cols-3 items-center justify-items-stretch">
-          {/* {isHomePage ? (
+          {isHomePage ? (
             <SideMenu
               btnAriaClose={sidePanelMenu.closePanelBtnAriaText}
               btnAriaOpen={sidePanelMenu.openPanelBtnAriaText}
@@ -53,7 +56,7 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
             >
               {toHomePage.name}
             </Link>
-          )} */}
+          )}
 
           <MobileMenu
             businessText={forTraitorBtnText}

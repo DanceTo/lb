@@ -19,6 +19,10 @@
           "href": "about"
         }
       ],
+      "toHomePage": {
+        "name": "На Главную",
+        "href": "/"
+      },
       "logoLeftText": "левый",
       "logoRightText": "берег",
       "forTraitorBtnText": "Коллаборанты",
