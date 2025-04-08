@@ -32,8 +32,8 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
   const isHomePage = checkPageName(pathname, HOME);
   const isTraitorPage = checkPageName(pathname, TRAITORS);
   const logoStyles = classNames({
-    'xl:mb-[-60px]': isHomePage,
-    'xl:mb-[-45px]': isTraitorPage,
+    'mb-[-49px] md:mb-[-58px] xl:mb-[-60px]': isHomePage,
+    'mb-[-49px] md:mb-[-40px] xl:mb-[-45px]': isTraitorPage,
   });
 
   return (
@@ -42,7 +42,6 @@ export const Header: React.FC<HeaderProps> = ({ data }) => {
         logoLeftText={logoLeftText}
         logoRightText={logoRightText}
         position="header"
-        // className="xl:mb-[-60px]"
         className={logoStyles}
       />
 
