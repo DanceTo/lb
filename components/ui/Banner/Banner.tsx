@@ -10,7 +10,7 @@ export const Banner: React.FC<BannerProps> = ({
   },
   image_description,
 }) => (
-  <div className="h-[50vw] w-full sm:h-[240px] md:h-[384px] xl:mx-auto xl:h-[610px] xl:w-[1220px]">
+  <div className="h-[50vw] w-full sm:h-[240px] md:h-[384px] xl:mx-auto xl:h-[450px] xl:w-[1220px]">
     <Image
       className="h-full w-full object-cover object-center"
       width={1220}
