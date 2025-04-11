@@ -303,3 +303,7 @@ a:focus-visible .link::before,
 .biz-item::before {
   @apply absolute left-0 top-[50%] h-[4px] w-[4px] -translate-y-[50%] bg-black content-[""] xl:h-[8px] xl:w-[8px];
 }
+
+.animate-ping-slow {
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
